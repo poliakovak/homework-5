@@ -1,5 +1,5 @@
 //Анаграмма
-function anagram(origin,str){
+function checkAnagram(origin,str){
     origin = origin.toLowerCase();
     str = str.toLowerCase();
     if(origin.length !== str.length || origin === str){
