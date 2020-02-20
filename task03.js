@@ -3,7 +3,7 @@
 — число, которое передается в качестве аргумента
 функции.
 */
-function fib(n) {
+function getFibonacciNumber(n) {
     if(n <= 1){
         return n;
     }
@@ -12,7 +12,7 @@ function fib(n) {
     }
   }
 
-  function fib1(n) {
+  function getFibonacciNumber1(n) {
     let previous1 = 1;
     let previous2 = 1;
     for (let i = 3; i <= n; i++) {
