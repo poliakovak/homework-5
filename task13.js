@@ -75,7 +75,7 @@ function removeChar(str){
 значение с дополнительным знаком «+» или « -« в
 зависимости от передаваемого аргумента.
 */
-function zeros(num,len,sign){
+function fillWithZeros(num,len,sign){
     let numOfZeros = len - (num + '').length;
     let newStr = '';
   for ( ; numOfZeros > 0; numOfZeros--) {
@@ -94,7 +94,7 @@ function zeros(num,len,sign){
 которая осуществляет поиск подстроки str2 в
 строкеstr1 без учёта регистра символов.
 */
-function insensitiveSearch(str1,str2){
+function findSubstring(str1,str2){
     str1 = str1.toLowerCase();
     str2 = str2.toLowerCase();
     if(str1.indexOf(str2) === -1){
@@ -136,7 +136,7 @@ function repeatStr(str,n){
 вовращает имя файла (подстрока после последнего
 символа &quot;\&quot; ) из полного пути к файлу.
 */
-function path(pathname){
+function getPath(pathname){
     var result = pathname.split("/").pop();
     return result;
 }
@@ -146,7 +146,7 @@ function path(pathname){
 позицию pos строки str. По умолчанию подстрока
 вставляется в начало строки.
 */
-function insert(str, substr, pos){
+function insertSubstring(str, substr, pos){
     if(pos === undefined){
         return ""+substr+str;
     }
@@ -188,7 +188,7 @@ function cutString(str,n){
 возвращает количество символов stringsearch в
 строке str.
  */
-function count(str, stringsearch){
+function countSymbols(str, stringsearch){
     let arr = str.split('');
     let count = 0;
     for(let i = 0; i <= arr.length; i++){
@@ -209,7 +209,7 @@ function cutTegs(str){
 /*Напишите функцию strip(str), которая удаляет все
 лишние пробелы из строки str.
  */
-function strip(str){
+function stripString(str){
     return str.trim();
 }
 
@@ -226,7 +226,7 @@ function cutString(str, n){
 уникальные символы, т.е. встречающиеся в строке
 один раз.
  */
-function uniqueLetters(str){
+function getUniqueLetters(str){
     str = str.split('');
     let res = str.filter(function(value,str) {
         return str.lastIndexOf(value) === str.indexOf(value);
